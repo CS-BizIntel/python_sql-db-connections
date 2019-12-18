@@ -1,0 +1,11 @@
+import sqlalchemy 
+from sqlalchemy import create_engine
+
+def create_mysql_engine (dialect_driver,enter_user,enter_password,enter_host_ip,enter_port,enter_database):
+    mysql_engine = create_engine(dialect_driver + '://' 
+                       + enter_user + ':' 
+                       + enter_password + '@' 
+                       + enter_host_ip + ':' 
+                       + enter_port + '/' 
+                       + enter_database , echo=False) 
+    return mysql_engine
