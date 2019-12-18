@@ -1,6 +1,7 @@
 import sqlalchemy 
 from sqlalchemy import create_engine
 
+#dialect_driver for mysql is typically 'mysql+mysqlconnector'
 def create_mysql_engine (dialect_driver,enter_user,enter_password,enter_host_ip,enter_port,enter_database):
     mysql_engine = create_engine(dialect_driver + '://' 
                        + enter_user + ':' 
