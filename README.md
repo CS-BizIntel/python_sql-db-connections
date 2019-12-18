@@ -1,6 +1,6 @@
 # python_sql-db-connections
 
-python_sql-db-connections is a repository for documenting methods of connecting to SQL-based Databases via Python
+python_sql-db-connections is a repository for documenting connection methods for SQL-based Databases via Python
 
 ## Imports
 ```python
