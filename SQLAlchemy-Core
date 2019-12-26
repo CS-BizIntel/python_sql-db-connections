@@ -1,0 +1,12 @@
+A majority of the CS Data Pipelines were created using some version of SQLAlchemy-Core.
+
+SQLAlchemy-Core can be used to execute raw SQL queries after creating the engine (https://docs.sqlalchemy.org/en/13/core/engines.html). The SQLAlchemy Engine has basic methods such as .connect(), .execute(), .dispose()
+
+Generic structure is as follows (https://stackoverflow.com/questions/43300886/what-is-the-difference-between-sqlalchemy-core-and-orm):
+
+engine = create_engine('mysql://scott:tiger@localhost/test')
+connection = engine.connect()
+result = connection.execute("select username from users")
+for row in result:
+    print("username:", row['username'])
+connection.close()
